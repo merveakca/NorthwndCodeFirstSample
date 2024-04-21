@@ -12,12 +12,14 @@ public class Product : BaseModel
     [MaxLength(40)]
     public string ProductName { get; set; }
 
-    [ForeignKey("SupplierID")]
+    
     public int? SupplierID { get; set; }
+    [ForeignKey("SupplierID")]
     public Supplier? Supplier { get; set; }
 
-    [ForeignKey("CategoryID")]
+    
     public int? CategoryID { get; set; }
+    [ForeignKey("CategoryID")]
     public Category? Category { get; set; }
 
     [MaxLength(20)]

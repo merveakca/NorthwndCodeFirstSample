@@ -48,8 +48,9 @@ public class Employee : BaseModel
     public byte[]? Photo { get; set; }
     public string? Notes { get; set; }
 
-    [ForeignKey("ReportTo")]
+    
     public int? ReportToId { get; set; }
+    [ForeignKey("ReportTo")]
     public Employee? ReportTo {  get; set; }
 
     [MaxLength(255)]
